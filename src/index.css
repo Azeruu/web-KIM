@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: retro --default, mai;
+  themes: lightcuy --default, myDark --prefersdark;
  }
 
 :root{
@@ -11,37 +11,114 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+
 @plugin "daisyui/theme" {
-  name: "mai";
-  default: false;
-  prefersdark: true;
-  color-scheme: "dark";
-  --color-base-100: oklch(27% 0.041 260.031);
-  --color-base-200: oklch(27% 0.033 256.848);
-  --color-base-300: oklch(13% 0.028 261.692);
-  --color-base-content: oklch(85% 0.138 181.071);
-  --color-primary: oklch(50% 0.134 242.749);
-  --color-primary-content: oklch(98% 0.019 200.873);
-  --color-secondary: oklch(70% 0.14 182.503);
-  --color-secondary-content: oklch(26% 0.051 172.552);
-  --color-accent: oklch(66% 0.179 58.318);
-  --color-accent-content: oklch(97% 0.013 17.38);
-  --color-neutral: oklch(14% 0.004 49.25);
-  --color-neutral-content: oklch(98% 0.001 106.423);
-  --color-info: oklch(68% 0.169 237.323);
-  --color-info-content: oklch(14% 0 0);
-  --color-success: oklch(79% 0.209 151.711);
-  --color-success-content: oklch(14% 0 0);
-  --color-warning: oklch(85% 0.199 91.936);
-  --color-warning-content: oklch(12% 0.042 264.695);
-  --color-error: oklch(71% 0.194 13.428);
-  --color-error-content: oklch(14% 0 0);
+  name: "lightcuy";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+
+  /* Base colors - menggunakan D1F8EF sebagai base dengan variasi */
+  --color-base-100: oklch(97% 0.02 180); /* #D1F8EF - paling terang */
+  --color-base-200: oklch(94% 0.025 180); /* sedikit lebih gelap */
+  --color-base-300: oklch(88% 0.03 180); /* untuk borders/dividers */
+  --color-base-content: oklch(35% 0.08 240); /* #3674B5 - untuk text utama */
+
+  /* Primary - menggunakan #3674B5 */
+  --color-primary: oklch(52% 0.12 240); /* #3674B5 */
+  --color-primary-content: oklch(98% 0.01 180); /* text di atas primary */
+
+  /* Secondary - menggunakan #578FCA */
+  --color-secondary: oklch(62% 0.10 235); /* #578FCA */
+  --color-secondary-content: oklch(98% 0.01 180); /* text di atas secondary */
+
+  /* Accent - menggunakan #A1E3F9 */
+  --color-accent: oklch(87% 0.08 220); /* #A1E3F9 */
+  --color-accent-content: oklch(35% 0.08 240); /* #3674B5 untuk kontras */
+
+  /* Neutral - turunan dari base colors */
+  --color-neutral: oklch(82% 0.015 240); /* neutral dengan hint biru */
+  --color-neutral-content: oklch(30% 0.06 240); /* text gelap */
+
+  /* Info - tetap biru cerah untuk informasi */
+  --color-info: oklch(70% 0.15 240); /* biru info */
+  --color-info-content: oklch(98% 0.01 180);
+
+  /* Success - hijau mint sesuai palette */
+  --color-success: oklch(85% 0.10 160); /* hijau mint */
+  --color-success-content: oklch(28% 0.06 160);
+
+  /* Warning - kuning/orange untuk kontras */
+  --color-warning: oklch(78% 0.16 75); /* kuning hangat */
+  --color-warning-content: oklch(25% 0.08 60);
+
+  /* Error - merah untuk kontras dengan palette */
+  --color-error: oklch(60% 0.22 20); /* merah error */
+  --color-error-content: oklch(98% 0.01 180);
+
+  /* Border & Shape settings */
   --radius-selector: 1rem;
   --radius-field: 1rem;
   --radius-box: 1rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 0;
-  --noise: 0;
+  --border: 1.5px;
+  --depth: 1;
+  --noise: 0.3;
 }
+@plugin "daisyui/theme" {
+  name: "darkcuy";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+
+  /* Base colors - menggunakan warna gelap dengan hint biru */
+  --color-base-100: oklch(20% 0.03 240); /* background paling gelap */
+  --color-base-200: oklch(24% 0.025 240); /* sedikit lebih terang */
+  --color-base-300: oklch(30% 0.02 240); /* untuk borders/dividers */
+  --color-base-content: oklch(92% 0.02 180); /* #D1F8EF - text utama yang terang */
+
+  /* Primary - menggunakan versi lebih terang dari #578FCA */
+  --color-primary: oklch(68% 0.12 235); /* #578FCA lebih bright */
+  --color-primary-content: oklch(18% 0.04 240); /* text gelap di atas primary */
+
+  /* Secondary - menggunakan versi lebih gelap dari #3674B5 */
+  --color-secondary: oklch(48% 0.10 240); /* #3674B5 lebih saturated */
+  --color-secondary-content: oklch(95% 0.02 180); /* text terang */
+
+  /* Accent - menggunakan #A1E3F9 dengan sedikit penyesuaian */
+  --color-accent: oklch(82% 0.10 220); /* #A1E3F9 */
+  --color-accent-content: oklch(20% 0.03 240); /* text gelap untuk kontras */
+
+  /* Neutral - abu-abu dengan hint biru */
+  --color-neutral: oklch(35% 0.02 240); /* neutral gelap */
+  --color-neutral-content: oklch(88% 0.02 180); /* text terang */
+
+  /* Info - biru cerah untuk dark mode */
+  --color-info: oklch(72% 0.18 235); /* biru info terang */
+  --color-info-content: oklch(18% 0.04 240);
+
+  /* Success - hijau mint terang */
+  --color-success: oklch(78% 0.14 160); /* hijau mint bright */
+  --color-success-content: oklch(18% 0.04 160);
+
+  /* Warning - kuning terang untuk visibility */
+  --color-warning: oklch(82% 0.18 80); /* kuning terang */
+  --color-warning-content: oklch(20% 0.06 60);
+
+  /* Error - merah terang untuk dark mode */
+  --color-error: oklch(65% 0.24 25); /* merah error bright */
+  --color-error-content: oklch(18% 0.04 20);
+
+  /* Border & Shape settings */
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1.5px;
+  --depth: 1;
+  --noise: 0.3;
+}
+
+
