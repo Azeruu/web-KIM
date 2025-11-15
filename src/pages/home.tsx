@@ -3,12 +3,14 @@ import { Map, Phone, Mail, Printer } from "lucide-react";
 
 // Data Collections - Ready for backend integration
 const collections = [
-  { id: 1, name: "FORTIS", slug: "fortis", image: "🏺", description: "Strong and elegant design" },
-  { id: 2, name: "Diamonds", slug: "diamonds", image: "💎", description: "Brilliant crystal cut patterns" },
+  { id: 22, name: "Rio", slug: "rio", image: "/collection/rio.jpg", description: "Carnival inspired design" },
+  { id: 1, name: "Simply", slug: "simply", image: "/collection/simply.jpg", description: "Simple but elegant design" },
+  { id: 2, name: "Diamonds", slug: "diamonds", image: "/collection/diamond.jpg", description: "Brilliant crystal cut patterns" },
+  { id: 4, name: "Rosa", slug: "rosa", image: "/collection/rosa.jpg", description: "Elegant rose pattern collection" },
+  { id: 5, name: "Strawberries", slug: "strawberries", image: "/collection/strawberries.jpg", description: "Fresh and vibrant design" },
+  { id: 6, name: "Tulips", slug: "tulips", image: "/collection/tulip.jpg", description: "Graceful floral patterns" },
+  { id: 1, name: "FORTIS", slug: "fortis", image: "/collection/rio.jpg", description: "Strong and elegant design" },
   { id: 3, name: "Cosmo", slug: "cosmo", image: "🌟", description: "Modern cosmic inspired design" },
-  { id: 4, name: "Rosa", slug: "rosa", image: "🌹", description: "Elegant rose pattern collection" },
-  { id: 5, name: "Strawberries", slug: "strawberries", image: "🍓", description: "Fresh and vibrant design" },
-  { id: 6, name: "Tulips", slug: "tulips", image: "🌷", description: "Graceful floral patterns" },
   { id: 7, name: "Quadro", slug: "quadro", image: "◼️", description: "Geometric square design" },
   { id: 8, name: "Bricks", slug: "bricks", image: "🧱", description: "Textured brick pattern" },
   { id: 9, name: "Daises", slug: "daises", image: "🌼", description: "Charming daisy collection" },
@@ -24,7 +26,6 @@ const collections = [
   { id: 19, name: "Imperial", slug: "imperial", image: "👑", description: "Royal imperial collection" },
   { id: 20, name: "Pearls", slug: "pearls", image: "🔮", description: "Lustrous pearl finish" },
   { id: 21, name: "Roses", slug: "roses", image: "🌺", description: "Beautiful rose collection" },
-  { id: 22, name: "Rio", slug: "rio", image: "🎭", description: "Carnival inspired design" },
   { id: 23, name: "Silhouette", slug: "silhouette", image: "🖼️", description: "Artistic silhouette pattern" },
   { id: 24, name: "Sea Shells", slug: "sea-shells", image: "🐚", description: "Ocean shell inspired" },
 ];
@@ -46,11 +47,11 @@ const categories = [
 const sampleProducts = [
   {
     id: 1,
-    name: "Premium Wine Glass",
+    name: "Mangkok Kolak",
     collectionId: 13, // Classic
     categoryId: 1, // Shot Glasses
-    image: "🍷",
-    price: 0,
+    image: "/KIM/B414.jpg",
+    price: 5000,
     inStock: true
   },
   {
@@ -108,10 +109,13 @@ const KimglassWebsite = () => {
   };
 
   return (
-    <div className="min-h-screen pt-10 bg-base-100">
+    <div className="min-h-screen pt-10 h-screen relative bg-fixed "
+      style={{ backgroundImage: "url('/KIM/aboutbanner.jpg')", backgroundRepeat: 'no-repeat', backgroundSize: 'contain', backgroundPosition: 'center' }}>
+
+      <div className="absolute inset-0 backdrop-blur-xs bg-gradient-to-b from-base-100 via-transparent to-base-100"></div>
 
       {/* Hero Section */}
-      <div id="home" className="hero min-h-screen">
+      <div id="home" className="hero min-h-screen relative">
         <div className="hero-content text-center">
           <div
             className="max-w-4xl"
@@ -138,10 +142,17 @@ const KimglassWebsite = () => {
                 <div className="absolute inset-0 bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-base-content mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-base-content mb-6"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? "scale(1)" : "scale(0.8)",
+                transition: "all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s",
+                textShadow: "0 0 10px rgba(0,255,255,0.8), 0 0 20px rgba(0,255,255,0.6)"
+              }}
+            >
               Crafting Clarity,
               <br />
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              <span className="text-base-content">
                 Defining Elegance
               </span>
             </h1>
@@ -161,7 +172,7 @@ const KimglassWebsite = () => {
       </div>
 
       {/* Features Section */}
-      <div id="about" className="py-20 bg-base-200">
+      <div id="about" className="py-20 bg-gradient-to-t from-base-300 via-primary to-base-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-primary mb-2">
             Why Choose KIMGLASS
@@ -197,11 +208,15 @@ const KimglassWebsite = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center rounded-2xl drop-shadow-xl hover:scale-105 transition-transform duration-500">
                     <img
-                      src="/LogoKIM.png"
+                      src="/kimoffice.png"
                       alt="KIM Glass Logo"
-                      className="w-80 h-80 object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                      className="w-auto h-auto object-contain "
+                      style={{
+                        maskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
+                        WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)'
+                      }}
                     />
                   </div>
                 </div>
@@ -209,21 +224,21 @@ const KimglassWebsite = () => {
             </div>
 
             {/* Vision & Mission Section */}
-            <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-base-300">
+            <div className="mt-5">
               <div className="card-body">
-                <h2 className="card-title text-3xl text-primary mb-4 justify-center">
+                <h2 className="card-title text-3xl text-primary-content mb-4 justify-center">
                   Vision & Mission
                 </h2>
                 <div className="space-y-6">
-                  <div className="p-6 bg-primary/5 rounded-lg border-l-4 border-primary">
+                  <div className="p-6 bg-base-100 rounded-lg border-b-4 border-primary text-center">
                     <h3 className="text-xl font-bold text-primary mb-2">Vision</h3>
                     <p className="text-base-content/80">
                       To be one of leading glass tableware producer in the world
                     </p>
                   </div>
-                  <div className="p-6 bg-secondary/5 rounded-lg border-l-4 border-secondary">
+                  <div className="p-6 bg-base-100 rounded-lg border-b-4 border-secondary text-center">
                     <h3 className="text-xl font-bold text-secondary mb-3">Mission</h3>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 ">
                       {[
                         "To be known globally as a supplier of best quality glassware.",
                         "To create progressive and innovative products for customers.",
@@ -233,7 +248,7 @@ const KimglassWebsite = () => {
                         "To provide work environments whereby of our employess can meet their potential and ethical manner",
                         "To contribute to the protection of the environments through use of recycled products and recycling our resources"
                       ].map((item, index) => (
-                        <li key={index} className="flex items-start gap-3">
+                        <li key={index} className="flex items-start gap-3 ">
                           <span className="text-accent text-xl flex-shrink-0">✓</span>
                           <span className="text-base-content/80">{item}</span>
                         </li>
@@ -248,7 +263,7 @@ const KimglassWebsite = () => {
       </div>
 
       {/* Certificate Section */}
-      <div className="py-16 bg-base-200" id="certificate">
+      <div className="py-16 bg-gradient-to-t from-base-100 via-primary to-base-300" id="certificate">
         <div className="container mx-auto px-4 text-center">
           {/* Title */}
           <h2 className="text-4xl font-bold text-primary mb-4">
@@ -326,7 +341,7 @@ const KimglassWebsite = () => {
 
 
       {/* Collections Section */}
-      <div id="collection" className="py-20 bg-base-100">
+      <div id="collection" className="py-20 bg-gradient-to-t from-base-300 to-base-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-primary mb-4">
             Our Collections
@@ -339,7 +354,7 @@ const KimglassWebsite = () => {
             {collections.slice(0, displayedCollections).map((collection, index) => (
               <div
                 key={collection.id}
-                className="card bg-base-200 shadow-md hover:shadow-xl hover:scale-105 border border-base-300 transition-all duration-300 cursor-pointer"
+                className="card bg-secondary-content shadow-md hover:shadow-xl hover:scale-105 border border-base-300 transition-all duration-300 cursor-pointer"
                 style={{
                   opacity: isVisible ? 1 : 0,
                   transform: isVisible ? "translateY(0)" : "translateY(20px)",
@@ -347,8 +362,9 @@ const KimglassWebsite = () => {
                 }}
                 onClick={() => setSelectedCollection(collection.id.toString())}
               >
+
                 <div className="card-body items-center text-center p-4">
-                  <div className="text-4xl mb-2">{collection.image}</div>
+                  <img src={collection.image} className="w-full h-full object-cover object-center" alt={collection.name} />
                   <h3 className="font-bold text-base-content text-sm">
                     {collection.name}
                   </h3>
@@ -379,7 +395,7 @@ const KimglassWebsite = () => {
       </div>
 
       {/* Products Section */}
-      <div id="product" className="py-20 bg-base-200">
+      <div id="product" className="py-20 bg-gradient-to-b from-base-300 to-primary">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-primary mb-4">
             Our Products
@@ -425,9 +441,7 @@ const KimglassWebsite = () => {
                     }}
                   >
                     <figure className="px-10 pt-10">
-                      <div className="text-7xl hover:scale-110 transition-transform duration-300">
-                        {product.image}
-                      </div>
+                      <img src={product.image} className="text-7xl hover:scale-110 transition-transform duration-300" />
                     </figure>
                     <div className="card-body items-center text-center">
                       <div className="flex gap-2 mb-2">
@@ -464,7 +478,7 @@ const KimglassWebsite = () => {
       </div>
 
       {/* CTA Section */}
-      <div id="contact" className="py-20 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
+      <div id="contact" className="py-20 bg-gradient-to-b from-primary to-base-200 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCA2YTEgMSAwIDEgMSAwLTIgMSAxIDAgMCAxIDAgMnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
         <div
           className="container mx-auto px-4 text-center relative z-10"
@@ -487,7 +501,7 @@ const KimglassWebsite = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-base-200 text-base-content/60 border-t border-base-300">
+      <footer className="bg-gradient-to-t from-secondary to-base-200 text-base-content/60 ">
 
         {/* BAGIAN UTAMA FOOTER (Grid Kolom) */}
         <div className="flex justify-between footer p-10">
@@ -549,9 +563,9 @@ const KimglassWebsite = () => {
         </div>
 
         {/* BAGIAN BAWAH (Copyright & Legal) */}
-        <div className="footer footer-center p-4 border-t border-base-300">
+        <div className="footer footer-center p-4">
           <aside>
-            <p className="text-sm">
+            <p className="text-sm text-base-200">
               © 2025 KIMGLASS. All rights reserved. |
               <a href="/kebijakan-privasi" className="link link-hover mx-2">Kebijakan Privasi</a> |
               <a href="/syarat-ketentuan" className="link link-hover mx-2">Syarat & Ketentuan</a>

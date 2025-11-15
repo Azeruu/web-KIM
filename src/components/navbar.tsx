@@ -33,12 +33,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`flex justify-between items-center sticky top-0 px-6 md:px-10 navbar py-3 backdrop-blur-md z-50 transition-all duration-300 ${
-        isScrolled
-          ? "border-base-300 bg-base-100/80 shadow-lg"
-          : "border-base-300/50 bg-base-100/60"
-      }`}
-      style={{
+      className={`flex justify-between items-center sticky top-0 px-6 md:px-10 navbar py-3 backdrop-blur-md z-50 transition-all duration-300 `}      style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(-30px)",
         transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
