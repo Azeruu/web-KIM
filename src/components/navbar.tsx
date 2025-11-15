@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -15,13 +15,7 @@ export default function Navbar() {
     document.documentElement.setAttribute("data-theme", savedTheme);
     setIsDark(isDarkMode);
 
-    // Handle scroll untuk efek navbar
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleTheme = () => {
