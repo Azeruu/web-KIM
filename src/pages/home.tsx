@@ -109,9 +109,15 @@ const KimglassWebsite = () => {
   };
 
   return (
-    <div className="min-h-screen pt-10 h-screen relative bg-fixed "
-      style={{ backgroundImage: "url('/KIM/aboutbanner.jpg')", backgroundRepeat: 'no-repeat', backgroundSize: 'contain', backgroundPosition: 'center' }}>
-
+    <div
+      className="min-h-screen pt-10 h-screen relative bg-fixed "
+      style={{
+        backgroundImage: "url('/KIMfront.JPG')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="absolute inset-0 backdrop-blur-xs bg-gradient-to-b from-base-100 via-transparent to-base-100"></div>
 
       {/* Hero Section */}
@@ -142,28 +148,35 @@ const KimglassWebsite = () => {
                 <div className="absolute inset-0 bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-base-content mb-6"
+            <h1
+              className="text-5xl md:text-7xl font-bold text-base-content mb-6"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "scale(1)" : "scale(0.8)",
                 transition: "all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s",
-                textShadow: "0 0 10px rgba(0,255,255,0.8), 0 0 20px rgba(0,255,255,0.6)"
+                textShadow:
+                  "0 0 10px rgba(0,255,255,0.8), 0 0 20px rgba(0,255,255,0.6)",
               }}
             >
               Crafting Clarity,
               <br />
-              <span className="text-base-content">
-                Defining Elegance
-              </span>
+              <span className="text-base-content">Defining Elegance</span>
             </h1>
             <p className="text-lg md:text-xl text-base-content/70 mb-8 max-w-4xl mx-auto">
-              We are KIM Glass, one of leading glass tableware producer in the world from Jakarta, Indonesia.
+              We are KIM Glass, one of leading glass tableware producer in the
+              world from Jakarta, Indonesia.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <a href="#collection" className="btn btn-primary border-none px-8 hover:shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300">
+              <a
+                href="#collection"
+                className="btn btn-primary border-none px-8 hover:shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300"
+              >
                 Explore Collection
               </a>
-              <a href="#contact" className="btn btn-secondary border-none px-8 hover:shadow-lg hover:shadow-secondary/30 hover:scale-105 transition-all duration-300">
+              <a
+                href="#contact"
+                className="btn btn-secondary border-none px-8 hover:shadow-lg hover:shadow-secondary/30 hover:scale-105 transition-all duration-300"
+              >
                 Contact Us
               </a>
             </div>
@@ -172,39 +185,67 @@ const KimglassWebsite = () => {
       </div>
 
       {/* Features Section */}
-      <div id="about" className="py-20 bg-gradient-to-t from-base-300 via-primary to-base-100">
+      <div
+        id="about"
+        className="py-20 bg-gradient-to-t from-base-300 via-primary to-base-100"
+      >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-primary mb-2">
             Why Choose KIMGLASS
           </h2>
           <p className="text-lg text-center text-base-content/70 mb-12">
-            We Produce Premium glassware solutions for modern living. Experience the perfect blend of functionality and timeless design.
+            We Produce Premium glassware solutions for modern living. Experience
+            the perfect blend of functionality and timeless design.
           </p>
           <div className="grid md:grid-cols-1 gap-8">
             {/* Profile Section */}
-            <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-base-300">
+            <div className="card bg-base-100/5 backdrop-blur-lg transition-all duration-300">
               <div className="card-body">
                 <h2 className="card-title text-3xl text-primary mb-4 justify-center">
                   Company Profile
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6 items-center">
-                  <div>
-                    <h3 className="text-xl font-bold text-secondary mb-3">Who Are We?</h3>
+                  <div className="text-center md:text-left">
+                    <h3 className="text-xl font-bold text-secondary text-center mb-3">
+                      Who Are We?
+                    </h3>
                     <p className="text-base-content/80 leading-relaxed">
-                      We are company With 25 years of experience, KIM Glass Indonesia (P.T KWARSA INDAHMURNI) is established as one of the leading table glassware manufacturers in Indonesia. At KIM Glass, our commitment is to produce and deliver quality products, customer satisfaction and product diversification.
+                      We are company With 25 years of experience, KIM Glass
+                      Indonesia (P.T KWARSA INDAHMURNI) is established as one of
+                      the leading table glassware manufacturers in Indonesia. At
+                      KIM Glass, our commitment is to produce and deliver
+                      quality products, customer satisfaction and product
+                      diversification.
                     </p>
                     <p className="text-base-content/80 leading-relaxed mt-4">
-                      Our factory employs more than 800 personnel and produced an average of 180 tons of glassware daily at full capacity. We exports to more than 30 countries including South East Asia, U.S.A, Japan, Mexico, Brazil, Argentina and Turkey.
+                      Our factory employs more than 800 personnel and produced
+                      an average of 180 tons of glassware daily at full
+                      capacity. We exports to more than 30 countries including
+                      South East Asia, U.S.A, Japan, Mexico, Brazil, Argentina
+                      and Turkey.
                     </p>
                     <p className="text-base-content/80 leading-relaxed mt-4">
-                      For our big chain retail customers, we have underwent and passed a series of audits to verify that our factory complies to the social, health, safety and good manufacturing aspects of the overall working conditions. These audits include: Security Chain Supply Assessment (Walmart), Social and Responsible Sourcing Audits (Walmart), ICS (initiative Clause Sociale) Audit (Casino Groupe) and Factory Capacity and Capability Audits (Walmart).
+                      For our big chain retail customers, we have underwent and
+                      passed a series of audits to verify that our factory
+                      complies to the social, health, safety and good
+                      manufacturing aspects of the overall working conditions.
+                      These audits include: Security Chain Supply Assessment
+                      (Walmart), Social and Responsible Sourcing Audits
+                      (Walmart), ICS (initiative Clause Sociale) Audit (Casino
+                      Groupe) and Factory Capacity and Capability Audits
+                      (Walmart).
                     </p>
                     <p className="text-base-content/80 leading-relaxed mt-4">
-                      In 2017, we are proud to announce that our factory is now ISO 9001: 2015 certified (UKAS Management Systems; Certificate no. 0096752-01).
+                      In 2017, we are proud to announce that our factory is now
+                      ISO 9001: 2015 certified (UKAS Management Systems;
+                      Certificate no. 0096752-01).
                     </p>
                     <div className="mt-4 p-4 bg-accent/10 rounded-lg border-l-4 border-accent">
                       <p className="text-sm text-base-content/70">
-                        <strong className="text-accent">ISO 9001:2015 Certified</strong> - UKAS Management Systems (Certificate no. 0096752-01)
+                        <strong className="text-accent">
+                          ISO 9001:2015 Certified
+                        </strong>{" "}
+                        - UKAS Management Systems (Certificate no. 0096752-01)
                       </p>
                     </div>
                   </div>
@@ -214,8 +255,10 @@ const KimglassWebsite = () => {
                       alt="KIM Glass Logo"
                       className="w-auto h-auto object-contain "
                       style={{
-                        maskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
-                        WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)'
+                        maskImage:
+                          "radial-gradient(circle, black 60%, transparent 100%)",
+                        WebkitMaskImage:
+                          "radial-gradient(circle, black 60%, transparent 100%)",
                       }}
                     />
                   </div>
@@ -230,14 +273,18 @@ const KimglassWebsite = () => {
                   Vision & Mission
                 </h2>
                 <div className="space-y-6">
-                  <div className="p-6 bg-base-100 rounded-lg border-b-4 border-primary text-center">
-                    <h3 className="text-xl font-bold text-primary mb-2">Vision</h3>
+                  <div className="p-6 bg-base-100/10 rounded-lg text-center">
+                    <h3 className="text-xl font-bold text-primary mb-2">
+                      Vision
+                    </h3>
                     <p className="text-base-content/80">
                       To be one of leading glass tableware producer in the world
                     </p>
                   </div>
-                  <div className="p-6 bg-base-100 rounded-lg border-b-4 border-secondary text-center">
-                    <h3 className="text-xl font-bold text-secondary mb-3">Mission</h3>
+                  <div className="p-6 bg-base-100/10 backdrop-blur-lg rounded-lg text-center">
+                    <h3 className="text-xl font-bold text-primary mb-3">
+                      Mission
+                    </h3>
                     <ul className="space-y-3 ">
                       {[
                         "To be known globally as a supplier of best quality glassware.",
@@ -246,10 +293,12 @@ const KimglassWebsite = () => {
                         "To nurture and expand customers loyalty.",
                         "To conduct our business in a socially responsible and ethical manner",
                         "To provide work environments whereby of our employess can meet their potential and ethical manner",
-                        "To contribute to the protection of the environments through use of recycled products and recycling our resources"
+                        "To contribute to the protection of the environments through use of recycled products and recycling our resources",
                       ].map((item, index) => (
                         <li key={index} className="flex items-start gap-3 ">
-                          <span className="text-accent text-xl flex-shrink-0">✓</span>
+                          <span className="text-accent text-xl flex-shrink-0">
+                            ✓
+                          </span>
                           <span className="text-base-content/80">{item}</span>
                         </li>
                       ))}
@@ -263,7 +312,10 @@ const KimglassWebsite = () => {
       </div>
 
       {/* Certificate Section */}
-      <div className="py-16 bg-gradient-to-t from-base-100 via-primary to-base-300" id="certificate">
+      <div
+        className="py-16 bg-gradient-to-t from-base-100 via-primary to-base-300"
+        id="certificate"
+      >
         <div className="container mx-auto px-4 text-center">
           {/* Title */}
           <h2 className="text-4xl font-bold text-primary mb-4">
@@ -277,7 +329,7 @@ const KimglassWebsite = () => {
           {/* Certificate Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {/* Certificate Card */}
-            <div className="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300">
+            <div className="card bg-base-100/10 shadow-md hover:shadow-xl transition-all duration-300">
               <figure className="px-6 pt-6">
                 <img
                   src="/ISO.jpg"
@@ -297,7 +349,7 @@ const KimglassWebsite = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300">
+            <div className="card bg-base-100/10 shadow-md hover:shadow-xl transition-all duration-300">
               <figure className="px-6 pt-6">
                 <img
                   src="ISO.jpg"
@@ -317,7 +369,7 @@ const KimglassWebsite = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300">
+            <div className="card bg-base-100/10 shadow-md hover:shadow-xl transition-all duration-300">
               <figure className="px-6 pt-6">
                 <img
                   src="halal.jpg"
@@ -339,39 +391,53 @@ const KimglassWebsite = () => {
         </div>
       </div>
 
-
       {/* Collections Section */}
-      <div id="collection" className="py-20 bg-gradient-to-t from-base-300 to-base-100">
+      <div
+        id="collection"
+        className="py-20 bg-gradient-to-t from-base-300 to-base-100"
+      >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-primary mb-4">
             Our Collections
           </h2>
           <p className="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
-            Explore our diverse range of glassware collections, each with its unique design and character
+            Explore our diverse range of glassware collections, each with its
+            unique design and character
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-6">
-            {collections.slice(0, displayedCollections).map((collection, index) => (
-              <div
-                key={collection.id}
-                className="card bg-secondary-content shadow-md hover:shadow-xl hover:scale-105 border border-base-300 transition-all duration-300 cursor-pointer"
-                style={{
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                  transition: `all 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${0.3 + index * 0.05}s`,
-                }}
-                onClick={() => setSelectedCollection(collection.id.toString())}
-              >
-
-                <div className="card-body items-center text-center p-4">
-                  <img src={collection.image} className="w-full h-full object-cover object-center" alt={collection.name} />
-                  <h3 className="font-bold text-base-content text-sm">
-                    {collection.name}
-                  </h3>
-                  <p className="text-xs text-base-content/60">{collection.description}</p>
+            {collections
+              .slice(0, displayedCollections)
+              .map((collection, index) => (
+                <div
+                  key={collection.id}
+                  className="card bg-secondary-content/10 shadow-md hover:shadow-xl hover:scale-105 border border-base-300 transition-all duration-300 cursor-pointer"
+                  style={{
+                    opacity: isVisible ? 1 : 0,
+                    transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                    transition: `all 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${
+                      0.3 + index * 0.05
+                    }s`,
+                  }}
+                  onClick={() =>
+                    setSelectedCollection(collection.id.toString())
+                  }
+                >
+                  <div className="card-body items-center text-center p-4">
+                    <img
+                      src={collection.image}
+                      className="w-full h-full object-cover object-center"
+                      alt={collection.name}
+                    />
+                    <h3 className="font-bold text-base-content text-sm">
+                      {collection.name}
+                    </h3>
+                    <p className="text-xs text-base-content/60">
+                      {collection.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
 
           <div className="text-center">
@@ -380,7 +446,8 @@ const KimglassWebsite = () => {
                 onClick={showMoreCollections}
                 className="btn btn-primary btn-sm"
               >
-                Show More Collections ({collections.length - displayedCollections} more)
+                Show More Collections (
+                {collections.length - displayedCollections} more)
               </button>
             ) : displayedCollections > 8 ? (
               <button
@@ -395,20 +462,26 @@ const KimglassWebsite = () => {
       </div>
 
       {/* Products Section */}
-      <div id="product" className="py-20 bg-gradient-to-b from-base-300 to-primary">
+      <div
+        id="product"
+        className="py-20 bg-gradient-to-b from-base-300 to-primary"
+      >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-primary mb-4">
             Our Products
           </h2>
           <p className="text-center text-base-content/70 mb-8 max-w-2xl mx-auto">
-            Discover our curated selection of premium glassware designed for every occasion
+            Discover our curated selection of premium glassware designed for
+            every occasion
           </p>
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             <button
               onClick={() => setSelectedCategory("all")}
-              className={`btn btn-sm ${selectedCategory === "all" ? "btn-primary" : "btn-ghost"}`}
+              className={`btn btn-sm ${
+                selectedCategory === "all" ? "btn-primary" : "btn-ghost"
+              }`}
             >
               All Categories
             </button>
@@ -416,7 +489,11 @@ const KimglassWebsite = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id.toString())}
-                className={`btn btn-sm ${selectedCategory === category.id.toString() ? "btn-primary" : "btn-ghost"}`}
+                className={`btn btn-sm ${
+                  selectedCategory === category.id.toString()
+                    ? "btn-primary"
+                    : "btn-ghost"
+                }`}
               >
                 {category.icon} {category.name}
               </button>
@@ -427,21 +504,32 @@ const KimglassWebsite = () => {
           <div className="grid md:grid-cols-4 gap-6">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, index) => {
-                const collection = collections.find(c => c.id === product.collectionId);
-                const category = categories.find(c => c.id === product.categoryId);
+                const collection = collections.find(
+                  (c) => c.id === product.collectionId
+                );
+                const category = categories.find(
+                  (c) => c.id === product.categoryId
+                );
 
                 return (
                   <div
                     key={product.id}
-                    className="card bg-base-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 border border-base-300 transition-all duration-300"
+                    className="card bg-base-100/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 border border-base-300 transition-all duration-300"
                     style={{
                       opacity: isVisible ? 1 : 0,
-                      transform: isVisible ? "translateY(0)" : "translateY(30px)",
-                      transition: `all 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${0.5 + index * 0.1}s`,
+                      transform: isVisible
+                        ? "translateY(0)"
+                        : "translateY(30px)",
+                      transition: `all 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${
+                        0.5 + index * 0.1
+                      }s`,
                     }}
                   >
                     <figure className="px-10 pt-10">
-                      <img src={product.image} className="text-7xl hover:scale-110 transition-transform duration-300" />
+                      <img
+                        src={product.image}
+                        className="text-7xl hover:scale-110 transition-transform duration-300"
+                      />
                     </figure>
                     <div className="card-body items-center text-center">
                       <div className="flex gap-2 mb-2">
@@ -470,7 +558,9 @@ const KimglassWebsite = () => {
               })
             ) : (
               <div className="col-span-full text-center py-12">
-                <p className="text-base-content/60 text-lg">No products found for the selected filters</p>
+                <p className="text-base-content/60 text-lg">
+                  No products found for the selected filters
+                </p>
               </div>
             )}
           </div>
@@ -478,7 +568,10 @@ const KimglassWebsite = () => {
       </div>
 
       {/* CTA Section */}
-      <div id="contact" className="py-20 bg-gradient-to-b from-primary to-base-200 relative overflow-hidden">
+      <div
+        id="contact"
+        className="py-20 bg-gradient-to-b from-primary to-base-200 relative overflow-hidden"
+      >
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCA2YTEgMSAwIDEgMSAwLTIgMSAxIDAgMCAxIDAgMnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
         <div
           className="container mx-auto px-4 text-center relative z-10"
@@ -492,7 +585,8 @@ const KimglassWebsite = () => {
             Ready to Elevate Your Experience?
           </h2>
           <p className="text-xl text-primary-content/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust KIMGLASS for their glassware needs
+            Join thousands of satisfied customers who trust KIMGLASS for their
+            glassware needs
           </p>
           <button className="btn btn-accent border-none px-10 text-lg hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all duration-300">
             Get in Touch
@@ -502,10 +596,8 @@ const KimglassWebsite = () => {
 
       {/* Footer */}
       <footer className="bg-gradient-to-t from-secondary to-base-200 text-base-content/60 ">
-
         {/* BAGIAN UTAMA FOOTER (Grid Kolom) */}
-        <div className="flex justify-between footer p-10">
-
+        <div className="flex flex-col md:flex-row justify-between items-center footer p-10">
           {/* Kolom 1: Branding, Logo, & Media Sosial */}
           <aside className="flex flex-col justify-center items-center">
             <img
@@ -513,26 +605,29 @@ const KimglassWebsite = () => {
               alt="KIM Glass Logo"
               className="w-20 h-20"
             />
-            <p className="font-bold text-lg text-base-content">
-              KIMGLASS
-            </p>
-            <p className="max-w-xs text-sm">
+            <p className="font-bold text-lg text-base-content">KIMGLASS</p>
+            <p className="max-w-xs text-sm text-center">
               Produsen glassware dan kemasan kaca terdepan di Indonesia.
             </p>
-
           </aside>
 
           {/* Kolom 2: Navigasi "Perusahaan" */}
-          <nav>
+          <nav className="flex flex-col justify-start">
             <header className="footer-title">Perusahaan</header>
-            <a href="#about" className="link link-hover">Tentang Kami</a>
-            <a href="#contact" className="link link-hover">Hubungi Kami</a>
+            <a href="#about" className="link link-hover">
+              Tentang Kami
+            </a>
+            <a href="#contact" className="link link-hover">
+              Hubungi Kami
+            </a>
           </nav>
 
           {/* Kolom 3: Navigasi "Produk & Layanan" */}
-          <nav>
+          <nav className="flex flex-col justify-start">
             <header className="footer-title">Produk & Layanan</header>
-            <a href="#collection" className="link link-hover">Katalog Glassware</a>
+            <a href="#collection" className="link link-hover">
+              Katalog Glassware
+            </a>
           </nav>
 
           {/* Kolom 4: Kontak (Ditingkatkan dari kode Anda) */}
@@ -545,13 +640,18 @@ const KimglassWebsite = () => {
               className="flex gap-2 link link-hover"
             >
               <Map className="text-warning flex-shrink-0 mt-1" size={18} />
-              <span>Jl. Raya Serang KM 26, Balaraja, Tangerang 15610, Indonesia</span>
+              <span>
+                Jl. Raya Serang KM 26, Balaraja, Tangerang 15610, Indonesia
+              </span>
             </a>
             <a href="tel:+62215953366" className="flex gap-2 link link-hover">
               <Phone className="text-warning flex-shrink-0 mt-1" size={18} />
               <span>+6221 595 3366, 595 0514-16</span>
             </a>
-            <a href="mailto:mail@kimglass.co.id" className="flex gap-2 link link-hover">
+            <a
+              href="mailto:mail@kimglass.co.id"
+              className="flex gap-2 link link-hover"
+            >
               <Mail className="text-warning flex-shrink-0 mt-1" size={18} />
               <span>mail@kimglass.co.id</span>
             </a>
@@ -567,8 +667,13 @@ const KimglassWebsite = () => {
           <aside>
             <p className="text-sm text-base-200">
               © 2025 KIMGLASS. All rights reserved. |
-              <a href="/kebijakan-privasi" className="link link-hover mx-2">Kebijakan Privasi</a> |
-              <a href="/syarat-ketentuan" className="link link-hover mx-2">Syarat & Ketentuan</a>
+              <a href="/kebijakan-privasi" className="link link-hover mx-2">
+                Kebijakan Privasi
+              </a>{" "}
+              |
+              <a href="/syarat-ketentuan" className="link link-hover mx-2">
+                Syarat & Ketentuan
+              </a>
             </p>
           </aside>
         </div>
