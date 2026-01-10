@@ -1,124 +1,131 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: lightcuy --default, myDark --prefersdark;
- }
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root{
-  margin-top: -5rem;
+  /* margin-top: -5rem; */
   scroll-behavior: smooth;
+  --radius: 0.625rem;
+  --background: oklch(97.691% 0.02645 97.639);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(97.691% 0.02645 97.639);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(97.691% 0.02645 97.639);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --kim: oklch(47.174% 0.19818 263.964);
+  --glass: oklch(75.532% 0.13556 180.775);
 }
 body {
   font-family: 'Inter', sans-serif;
 }
 
-
-@plugin "daisyui/theme" {
-  name: "lightcuy";
-  default: true;
-  prefersdark: false;
-  color-scheme: "light";
-
-  /* Base colors - menggunakan D1F8EF sebagai base dengan variasi */
-  --color-base-100: oklch(97% 0.02 180); /* #D1F8EF - paling terang */
-  --color-base-200: oklch(94% 0.025 180); /* sedikit lebih gelap */
-  --color-base-300: oklch(88% 0.03 180); /* untuk borders/dividers */
-  --color-base-content: oklch(35% 0.08 240); /* #3674B5 - untuk text utama */
-
-  /* Primary - menggunakan #3674B5 */
-  --color-primary: oklch(52% 0.12 240); /* #3674B5 */
-  --color-primary-content: oklch(98% 0.01 180); /* text di atas primary */
-
-  /* Secondary - menggunakan #578FCA */
-  --color-secondary: oklch(62% 0.10 235); /* #578FCA */
-  --color-secondary-content: oklch(98% 0.01 180); /* text di atas secondary */
-
-  /* Accent - menggunakan #A1E3F9 */
-  --color-accent: oklch(87% 0.08 220); /* #A1E3F9 */
-  --color-accent-content: oklch(35% 0.08 240); /* #3674B5 untuk kontras */
-
-  /* Neutral - turunan dari base colors */
-  --color-neutral: oklch(82% 0.015 240); /* neutral dengan hint biru */
-  --color-neutral-content: oklch(30% 0.06 240); /* text gelap */
-
-  /* Info - tetap biru cerah untuk informasi */
-  --color-info: oklch(70% 0.15 240); /* biru info */
-  --color-info-content: oklch(98% 0.01 180);
-
-  /* Success - hijau mint sesuai palette */
-  --color-success: oklch(85% 0.10 160); /* hijau mint */
-  --color-success-content: oklch(28% 0.06 160);
-
-  /* Warning - kuning/orange untuk kontras */
-  --color-warning: oklch(78% 0.16 75); /* kuning hangat */
-  --color-warning-content: oklch(25% 0.08 60);
-
-  /* Error - merah untuk kontras dengan palette */
-  --color-error: oklch(60% 0.22 20); /* merah error */
-  --color-error-content: oklch(98% 0.01 180);
-
-  /* Border & Shape settings */
-  --radius-selector: 1rem;
-  --radius-field: 1rem;
-  --radius-box: 1rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1.5px;
-  --depth: 1;
-  --noise: 0.3;
-}
-@plugin "daisyui/theme" {
-  name: "darkcuy";
-  default: false;
-  prefersdark: true;
-  color-scheme: "dark";
-
-  /* Base colors - menggunakan warna gelap dengan hint biru */
-  --color-base-100: oklch(20% 0.03 240); /* background paling gelap */
-  --color-base-200: oklch(24% 0.025 240); /* sedikit lebih terang */
-  --color-base-300: oklch(30% 0.02 240); /* untuk borders/dividers */
-  --color-base-content: oklch(92% 0.02 180); /* #D1F8EF - text utama yang terang */
-
-  /* Primary - menggunakan versi lebih terang dari #578FCA */
-  --color-primary: oklch(68% 0.12 235); /* #578FCA lebih bright */
-  --color-primary-content: oklch(18% 0.04 240); /* text gelap di atas primary */
-
-  /* Secondary - menggunakan versi lebih gelap dari #3674B5 */
-  --color-secondary: oklch(48% 0.10 240); /* #3674B5 lebih saturated */
-  --color-secondary-content: oklch(95% 0.02 180); /* text terang */
-
-  /* Accent - menggunakan #A1E3F9 dengan sedikit penyesuaian */
-  --color-accent: oklch(82% 0.10 220); /* #A1E3F9 */
-  --color-accent-content: oklch(20% 0.03 240); /* text gelap untuk kontras */
-
-  /* Neutral - abu-abu dengan hint biru */
-  --color-neutral: oklch(35% 0.02 240); /* neutral gelap */
-  --color-neutral-content: oklch(88% 0.02 180); /* text terang */
-
-  /* Info - biru cerah untuk dark mode */
-  --color-info: oklch(72% 0.18 235); /* biru info terang */
-  --color-info-content: oklch(18% 0.04 240);
-
-  /* Success - hijau mint terang */
-  --color-success: oklch(78% 0.14 160); /* hijau mint bright */
-  --color-success-content: oklch(18% 0.04 160);
-
-  /* Warning - kuning terang untuk visibility */
-  --color-warning: oklch(82% 0.18 80); /* kuning terang */
-  --color-warning-content: oklch(20% 0.06 60);
-
-  /* Error - merah terang untuk dark mode */
-  --color-error: oklch(65% 0.24 25); /* merah error bright */
-  --color-error-content: oklch(18% 0.04 20);
-
-  /* Border & Shape settings */
-  --radius-selector: 1rem;
-  --radius-field: 1rem;
-  --radius-box: 1rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1.5px;
-  --depth: 1;
-  --noise: 0.3;
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background;
+  }
+}
 
