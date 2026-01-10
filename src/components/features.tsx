@@ -47,7 +47,7 @@ const FeaturesSection = () => {
 
                 {/* Features Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-                    {features.map((feature, index) => (
+                    {features.map((feature) => (
                         <div
                             key={feature.title}
                             className="group p-8 bg-card border border-foreground/30 rounded-lg shadow-soft hover:shadow-elegant transition-all duration-500 text-center"
@@ -62,7 +62,7 @@ const FeaturesSection = () => {
                 </div>
                 <h1 className="text-foreground text-center font-serif text-3xl mt-20 mb-10">Our Certifications</h1>
                 <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 ">
-                    {certification.map((cert, index) => (
+                    {certification.map((cert) => (
                         <div
                             key={cert.title}
                             className="group p-8 bg-card border border-foreground/30 rounded-lg shadow-soft hover:shadow-elegant transition-all duration-500 text-center"
