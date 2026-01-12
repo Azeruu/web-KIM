@@ -3,18 +3,18 @@ import { Shield, Award, Leaf, Truck } from "lucide-react";
 const features = [
     {
         icon: Shield,
-        title: "Kualitas Terjamin",
-        description: "Setiap produk melalui quality control ketat dengan standar internasional untuk memastikan kualitas terbaik.",
+        title: "Guaranteed Quality",
+        description: "Each product goes through strict quality control with international standards to ensure the best quality..",
     },
     {
         icon: Leaf,
-        title: "Ramah Lingkungan",
-        description: "Proses produksi kami menerapkan praktik berkelanjutan dengan material yang dapat didaur ulang.",
+        title: "Environmentally Friendly",
+        description: "Our production process implements sustainable practices with recyclable materials.",
     },
     {
         icon: Truck,
-        title: "Pengiriman Cepat",
-        description: "Jaringan distribusi luas untuk pengiriman tepat waktu ke seluruh Indonesia dan mancanegara.",
+        title: "Fast Delivery",
+        description: "Extensive distribution network for timely delivery throughout Indonesia and abroad.",
     },
 ];
 const certification = [
@@ -52,8 +52,8 @@ const FeaturesSection = () => {
                             key={feature.title}
                             className="group p-8 bg-card border border-foreground/30 rounded-lg shadow-soft hover:shadow-elegant transition-all duration-500 text-center"
                         >
-                            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-secondary flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
-                                <feature.icon className="w-7 h-7 text-primary group-hover:text-accent transition-colors duration-300" />
+                            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-secondary flex items-center justify-center group-hover:bg-background transition-colors duration-300">
+                                <feature.icon className="w-7 h-7 text-primary group-hover:text-foreground transition-colors duration-300" />
                             </div>
                             <h3 className="font-serif text-xl text-foreground mb-3">{feature.title}</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
@@ -67,8 +67,8 @@ const FeaturesSection = () => {
                             key={cert.title}
                             className="group p-8 bg-card border border-foreground/30 rounded-lg shadow-soft hover:shadow-elegant transition-all duration-500 text-center"
                         >
-                            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-secondary flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
-                                <cert.icon className="w-7 h-7 text-primary group-hover:text-accent transition-colors duration-300" />
+                            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-secondary flex items-center justify-center group-hover:bg-accent transition-colors duration-300">
+                                <cert.icon className="w-7 h-7 text-primary group-hover:text-foreground transition-colors duration-300" />
                             </div>
                             <h3 className="font-serif text-xl text-foreground mb-3">{cert.title}</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">{cert.description}</p>

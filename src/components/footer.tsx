@@ -10,25 +10,25 @@ const Footer = () => {
                             <span className="font-light text-primary-foreground/70">GLASS</span>
                         </a>
                         <p className="text-primary-foreground/70 leading-relaxed max-w-sm">
-                            Produsen glassware premium dengan lebih dari 25 tahun pengalaman dalam menghadirkan produk kaca berkualitas tinggi untuk pasar domestik dan internasional.
+                            Premium glassware manufacturer with over 25 years of experience in delivering high-quality glass products to domestic and international markets.
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-primary-foreground font-medium mb-4 uppercase tracking-wider text-sm">Navigasi</h4>
+                        <h4 className="text-primary-foreground font-medium mb-4 uppercase tracking-wider text-sm">Navigation</h4>
                         <ul className="space-y-1">
-                            <li><a href="#beranda" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Beranda</a></li>
-                            <li><a href="#tentang" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Tentang Kami</a></li>
-                            <li><a href="#produk" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Produk</a></li>
-                            <li><a href="#keunggulan" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Keunggulan</a></li>
-                            <li><a href="#kontak" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Kontak</a></li>
+                            <li><a href="#beranda" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Home</a></li>
+                            <li><a href="#tentang" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">About Us</a></li>
+                            <li><a href="#produk" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Products</a></li>
+                            <li><a href="#keunggulan" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Features</a></li>
+                            <li><a href="#kontak" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Contact</a></li>
                         </ul>
                     </div>
-
+        
                     {/* Products */}
                     <div>
-                        <h4 className="text-primary-foreground font-medium mb-4 uppercase tracking-wider text-sm">Produk</h4>
+                        <h4 className="text-primary-foreground font-medium mb-4 uppercase tracking-wider text-sm">Products</h4>
                         <ul className="space-y-3">
                             <li><a href="#produk" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Wine Glasses</a></li>
                             <li><a href="#produk" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">Champagne Flutes</a></li>
